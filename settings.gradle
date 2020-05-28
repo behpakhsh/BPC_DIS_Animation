@@ -1,0 +1,3 @@
+rootProject.name='BPC_DIS_Animation'
+include ':app'
+include ':animation'
