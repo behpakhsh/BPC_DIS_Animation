@@ -9,6 +9,7 @@ public class AnimationManager {
 
     public void start(Context context, AnimationType animationType, View view) {
         if (context != null && animationType != null && view != null) {
+            stop(view);
             int animRes = 0;
             switch (animationType) {
                 case SHAKE:
@@ -25,6 +26,12 @@ public class AnimationManager {
                     break;
                 case SCALE_DOWN_BOUNCE:
                     animRes = R.anim.scale_down_bounce;
+                    break;
+                case SCALE_UP:
+                    animRes = R.anim.scale_up;
+                    break;
+                case SCALE_DOWN:
+                    animRes = R.anim.scale_down;
                     break;
             }
             Animation animation = AnimationUtils.loadAnimation(context, animRes);
