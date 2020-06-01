@@ -20,6 +20,12 @@ public class AnimationManager {
                 case SCALE_INFINITE:
                     animRes = R.anim.scale_infinite;
                     break;
+                case SCALE_UP_BOUNCE:
+                    animRes = R.anim.scale_up_bounce;
+                    break;
+                case SCALE_DOWN_BOUNCE:
+                    animRes = R.anim.scale_down_bounce;
+                    break;
             }
             Animation animation = AnimationUtils.loadAnimation(context, animRes);
             view.setAnimation(animation);
