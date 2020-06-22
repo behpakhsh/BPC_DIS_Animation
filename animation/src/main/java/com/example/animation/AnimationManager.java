@@ -33,6 +33,12 @@ public class AnimationManager {
                 case SCALE_DOWN:
                     animRes = R.anim.scale_down;
                     break;
+                case ROTATE_180_CLOCKWISE:
+                    animRes = R.anim.rotate_180_clockwise;
+                    break;
+                case ROTATE_180_ANTI_CLOCKWISE:
+                    animRes = R.anim.rotate_180_anti_clockwise;
+                    break;
             }
             Animation animation = AnimationUtils.loadAnimation(context, animRes);
             view.setAnimation(animation);
