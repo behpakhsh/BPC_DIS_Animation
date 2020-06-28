@@ -47,13 +47,15 @@ public class AnimationManager {
     }
 
     public void stop(View view) {
-        Animation animation = view.getAnimation();
-        if (animation != null) {
-            animation.reset();
-            animation.cancel();
+        if (view != null) {
+            Animation animation = view.getAnimation();
+            if (animation != null) {
+                animation.reset();
+                animation.cancel();
+            }
+            view.clearAnimation();
+            view.setAnimation(null);
         }
-        view.clearAnimation();
-        view.setAnimation(null);
     }
 
 }
